@@ -1,0 +1,104 @@
+<html>
+<style>
+form {
+    border: 3px solid #f1f1f1;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+body {
+    background-color: grey;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    
+}
+</style>
+<body>
+
+<center>
+<h2> <font color="green">Login to foodjoint </font> </h2>
+
+<div>
+<%= image_tag("img_avatar2.png", size:"250x250", alt:"Avatar" ) %>
+</div>
+</center>
+
+<div>
+  <%= form_for @login, url:login_index_path do |f| %>
+  
+			<%= f.label :firstname %>
+			</br>
+			<%= f.text_field :firstname, :class => "form-control input-sm chat-input" %>
+			</br>
+			
+			<%= f.label :password %>
+			</br>
+			<%= f.password_field :password, :class => "form-control input-sm chat-input" %>
+	 	    </br>
+		
+            <div class="wrapper">
+            <span class="group-btn"> 
+
+<input type="checkbox" checked="checked"> Remember me
+  </div>
+			
+               <%= f.submit "Login", :class => "btn btn-primary btn-md" %>
+			   
+			   <a href="http://localhost:3000" class="btn btn-danger">Cancel</a>
+			</span>
+			</div>
+			
+			<% end %>
+	
+  
+  
+</form>
+
+</body>
+</html>

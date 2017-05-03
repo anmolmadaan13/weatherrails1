@@ -1,0 +1,79 @@
+<style>
+body {
+    background-color: grey;
+}
+</style>
+<center>
+<body>
+<h1> <b> <font color="red">Sign Up</font> </b> </h1>
+</center>
+&nbsp;&nbsp;
+
+<%= form_for @customer4, url:signup_index_path do |f| %>
+  
+			<%= f.label :first_name %>
+			</br>
+			<%= f.text_field :firstname, :class => "form-control input-sm chat-input" %>
+			</br>
+			
+			<%= f.label :last_name %>
+			</br>
+			<%= f.text_field :lastname, :class => "form-control input-sm chat-input" %>
+	 	    </br>
+			
+			<%= f.label :email_id %>
+			</br>
+			<%= f.text_field :emailid, :class => "form-control input-sm chat-input" %>
+			</br>
+			
+			<%= f.label :password %>
+			</br>
+			<%= f.password_field :password, :class => "form-control input-sm chat-input" %>
+			</br>
+		
+            <%= f.label :gender %>
+			</br>
+			<%= f.text_field :gender, :class => "form-control input-sm chat-input" %>
+			</br>
+			
+			<%= f.label :date_of_birth %>
+			</br>
+			<%= f.text_field :dateofbirth, :class => "form-control input-sm chat-input" %>
+			</br>
+			
+			<%= f.label :mobile_number %>
+			</br>
+			<%= f.text_field :mobilenumber, :class => "form-control input-sm chat-input" %>
+			</br>
+			
+			<%= f.label :country %>
+			</br>
+			<%= f.text_field :country, :class => "form-control input-sm chat-input" %>
+			</br>
+			
+			<%= f.label :city %>
+			</br>
+			<%= f.text_field :city, :class => "form-control input-sm chat-input" %>
+			</br>
+			
+			<%= f.label :street %>
+			</br>
+			<%= f.text_field :street, :class => "form-control input-sm chat-input" %>
+			</br>
+			
+			<%= f.label :pin %>
+			</br>
+			<%= f.password_field :pin, :class => "form-control input-sm chat-input" %>
+			</br>
+  
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+	 <%= f.submit "Create Account", :class => "btn btn-primary btn-md" %>
+	 &nbsp;&nbsp;
+	 <a href="http://localhost:3000" class="btn btn-danger">Cancel</a>
+    </div>
+  </div>
+
+ <% end %> 
+  
+</form>

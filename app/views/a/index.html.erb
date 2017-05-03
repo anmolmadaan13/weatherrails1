@@ -1,0 +1,32 @@
+<center>
+
+<h1> <font color="orange">comment</font> </h1>
+
+<div>
+
+<%= form_for @c1, url:a_index_path do |f| %>
+  
+			<%= f.label :comment %>
+			</br>
+			<%= f.text_field :comment, :class => "form-control input-sm chat-input" %>
+			</br>
+			
+			
+			
+			
+		
+            <div class="wrapper">
+            <span class="group-btn"> 
+			
+               <%= f.submit "Add", :class => "btn btn-primary btn-md" %>
+			   
+			   <a href="http://localhost:3000/rest/index" class="btn btn-success"> Back to Restaurant </a>
+			   
+			</span>
+			</div>
+			
+			<% end %>
+			
+			</form>
+
+</center>

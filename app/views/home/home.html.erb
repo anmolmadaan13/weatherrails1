@@ -1,0 +1,95 @@
+
+
+<div class="aa">
+<a href="/rest/index">location</a>
+</div>
+
+<div class="navbar">
+<% if user_signed_in? %>
+  Logged in as <strong><%= current_user.email %></strong>.
+  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+<% else %>
+  <%= link_to "Signup", signup_index_path %>
+  <%= link_to "Login", login_index_path%>
+<% end %>
+</div>
+
+<div class="ab">
+<h1> Weather Forecast </h1>
+Select Location
+</div>
+<div class="ac">
+<form>
+<br><br>
+<a href="/page/index">|||Gurgaon</a>
+|||Delhi|||Mumbai|||Banglore|||Pune|||
+</form>
+</div>
+<div class="img">
+<img src="http://orig03.deviantart.net/ecfa/f/2012/236/f/c/hd_clouds_and_sun_by_shuttercarolina-d5carj5.jpg" style="width:1920px;height:1080px">
+
+</div>
+
+</body>
+
+<style>
+body{
+background-color:#9cb3d8;
+}
+.navbar{
+z-index:900;
+
+  position: fixed;
+  top:10%;
+  left:10%;
+font-size:35px;
+  transform: translate(-50%,-50%);
+  font-family:Ariel;
+  background: image-url('1.jpg');
+text-align:right;
+position:fixed;
+}
+.img{
+ z-index:100;
+ text-align:center;
+  position: fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+
+.ab{
+  z-index:900;
+  text-align:center;
+  position: fixed;
+  top:40%;
+  left:50%;
+font-size:35px;
+  transform: translate(-50%,-50%);
+  font-family:Ariel;
+  background: image-url('1.jpg');
+}
+.ac{
+  z-index:998;
+  text-align:center;
+  position: fixed;
+  top:60%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  font-family:Ariel;
+  background: image-url('1.jpg');
+}
+
+.aa{
+    text-align:left;
+	position:fixed;
+	top:3%;
+	left:97%;
+	transform: translate(-50%,-50%);
+	
+
+}
+
+
+</style>
